@@ -2,6 +2,7 @@ package com.library.daos;
 
 import java.util.List;
 
+import com.library.models.Book;
 import com.library.models.Category;
 
 public interface CategoryDao {
@@ -10,6 +11,10 @@ public interface CategoryDao {
 	public boolean updateCategory(Category categoryObj);
 	public Category getCategoryById(int catId);
 	public List<Category> getAllCategories();
+	
+	
+	
+	
 }
 
 

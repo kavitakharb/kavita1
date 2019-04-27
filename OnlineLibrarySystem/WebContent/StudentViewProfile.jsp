@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <div style="background-color:blue;height:100%">
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <jsp:include page="UserNavbar.jsp"/>
@@ -29,8 +30,17 @@
       	<td>Gender </td>
       	<td>${sessionScope.user1.gender}</td>
       </tr>
-      <tr>
-      	<td>Date of Birth </td>
-      	<td>${sessionScope.user1.dateOfBirth}</td>
+      
+       <tr>
+      	<td>Class Name </td>
+      	<td>${sessionScope.user1.className}</td>
       </tr>
+   
+   <tr>
+      	<td>Mobile No </td>
+      	<td>${sessionScope.user1.mobileNo}</td>
+      </tr>
+   
+   
   </table>
+  </div>

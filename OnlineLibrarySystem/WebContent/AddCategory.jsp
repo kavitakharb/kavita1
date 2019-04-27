@@ -1,5 +1,6 @@
-<jsp:include page="AdminNavbar.jsp"/>
 
+<div style="background-color:pink;height:100%">
+<jsp:include page="AdminNavbar.jsp"/>
 <br/>
 <!-- Content -->
 <div class="container">
@@ -18,9 +19,11 @@
   </div>
     <button type="submit" class="btn btn-default">Add Category</button>
 </form>
-
+<div style="text-align: right;">
+<a href="viewAllCategories">View ALL Categories</a>
+</div>
  </div>
  
 
-<br/><br/><br/>
+</div>
 	

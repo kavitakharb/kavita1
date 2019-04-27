@@ -3,8 +3,8 @@ package com.library.controllers;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
-import javax.servlet.RequestDispatcher;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,7 +18,9 @@ import com.library.models.Category;
 
 @WebServlet("/addCategory")
 public class AddCategoryController extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
@@ -46,4 +48,5 @@ public class AddCategoryController extends HttpServlet {
 				
 		
 	}
+
 }

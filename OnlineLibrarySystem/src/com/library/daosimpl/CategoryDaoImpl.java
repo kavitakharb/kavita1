@@ -6,10 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.library.daos.CategoryDao;
+import com.library.models.Book;
 import com.library.models.Category;
 import com.library.utility.ConnectionProvider;
 
-public class CategoryDaoImpl implements CategoryDao{
+public  class CategoryDaoImpl implements CategoryDao{
 	public boolean addCategory(Category categoryObj) {
 		try {
 		Connection conn=ConnectionProvider.getConnection();
@@ -113,4 +114,6 @@ public class CategoryDaoImpl implements CategoryDao{
 	}
 
 
-}
+
+	
+	}

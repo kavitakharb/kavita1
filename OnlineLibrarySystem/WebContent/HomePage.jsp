@@ -12,13 +12,13 @@
 				<div class="col-md-12">
 					<div class="row justify-content-center">
 						<div class="col-md-4">
-							<img src="images/admin2.jpg">
-								<a href="login.jsp"><button type="button"> Admin_login</button></a>
+							<img src="images/admin2.jpg" class="img-rounded">
+								<a href="login.jsp"><button type="button" style="font-size:25px"> Admin_login</button></a>
 					</div>
 
-	<div class="col-md-4">
+	<div class="col-md-4" style="margin-left:200px">
 		<img src="images/student2.jpg">
-		<a href="login.jsp"><button type="button" style="margin-left:200px"> Student_login</button></a>
+		<a href="login.jsp"><button type="button" style="margin-left:20px;font-size:25px"> Student/member_login</button></a>
 	</div>
    </div>
 
@@ -27,6 +27,5 @@
 </div>
 </div>
 </div>
-<p/>
-<jsp:include page="Footer.jsp"/>
+
 </div>

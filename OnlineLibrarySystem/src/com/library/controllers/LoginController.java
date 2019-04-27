@@ -12,10 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.library.daos.LoginDao;
+import com.library.daos.MemberDao;
 import com.library.daos.StudentDao;
 import com.library.daosimpl.LoginDaoImpl;
+import com.library.daosimpl.MemberDaoImpl;
 import com.library.daosimpl.StudentDaoImpl;
 import com.library.models.Login;
+import com.library.models.Member;
 import com.library.models.Student;
 
 @WebServlet("/Login")
@@ -44,17 +47,41 @@ public class LoginController extends HttpServlet {
 		else {
 			String role=obj.getRole();
 			if(role.equals("Admin")) {
+				StudentDao DaoObj=new StudentDaoImpl();
+				
+				Student userObj=DaoObj.getUser(s1);
+				
+				HttpSession session=request.getSession();
+				session.setAttribute("user",userObj);
+				session.setAttribute("role", "Admin");
+				
 				RequestDispatcher rd=request.getRequestDispatcher("AdminHome.jsp");
 				rd.forward(request, response);
 			}
 			else if(role.equals("student")) {
 				StudentDao DaoObj=new StudentDaoImpl();
+				
 				Student userObj=DaoObj.getUser(s1);
 				
 				HttpSession session=request.getSession();
 				session.setAttribute("user1",userObj);
+				session.setAttribute("role", "Student");
+				
 				
 				RequestDispatcher rd=request.getRequestDispatcher("UserHome.jsp");
+				rd.forward(request, response);
+			}
+			else if(role.equals("member")) {
+				MemberDao DaoObj=new MemberDaoImpl();
+				
+				Member userObj=DaoObj.getUser(s1);
+				
+				HttpSession session=request.getSession();
+				session.setAttribute("user1",userObj);
+				session.setAttribute("role", "Member");
+				
+				
+				RequestDispatcher rd=request.getRequestDispatcher("MemberHome.jsp");
 				rd.forward(request, response);
 			}
 		}

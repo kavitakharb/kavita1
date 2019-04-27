@@ -9,6 +9,9 @@ public class Student {
 	private String lastName;
 	private String gender;
 	private Date dateOfBirth;
+	private String className;
+	private Long mobileNo;
+	
 	public String getEmail() {
 		return email;
 	}
@@ -45,6 +48,19 @@ public class Student {
 	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
+	public String getClassName() {
+		return className;
+	}
+	public void setClassName(String className) {
+		this.className = className;
+	}
+	public Long getMobileNo() {
+		return mobileNo;
+	}
+	public void setMobileNo(Long mobileNo) {
+		this.mobileNo = mobileNo;
+	}
+	
 
 	
 }

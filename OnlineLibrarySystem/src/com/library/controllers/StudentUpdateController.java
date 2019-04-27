@@ -31,26 +31,30 @@ public class StudentUpdateController extends HttpServlet {
     	String s2=request.getParameter("fName");
     	String s3=request.getParameter("lName");
     	String s4=request.getParameter("gender");
-    	String s5=request.getParameter("dob");
-    
+    	String s5=request.getParameter("className");
+    	Long s6=Long.parseLong(request.getParameter("mobileNo"));
+    	/*String s5=request.getParameter("dob");
+    */
     	
     	//Converting String into java.util.Date
-    	SimpleDateFormat sdf=new SimpleDateFormat("dd-MM-yyyy");
+    /*	SimpleDateFormat sdf=new SimpleDateFormat("dd-MM-yyyy");
     	Date dob=null;
 		try {
 			dob = sdf.parse(s5);
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-    	
+    */	
     	Student stdObj=new Student();
     	stdObj.setEmail(s1);
     	stdObj.setFirstName(s2);
     	stdObj.setLastName(s3);
     	stdObj.setGender(s4);
+    	stdObj.setClassName(s5);
+    	stdObj.setMobileNo(s6);
     	
     	
-    	stdObj.setDateOfBirth(dob);
+    //	stdObj.setDateOfBirth(dob);
 
     	StudentDao dao=new StudentDaoImpl();
     	boolean r=dao.updateStudent(stdObj);

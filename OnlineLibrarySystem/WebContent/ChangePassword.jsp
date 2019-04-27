@@ -1,5 +1,5 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<div style="background-image:url(images/m3.jpg);height:100%">
+<div style="background-color:blue;height:100%">
 
 <jsp:include page="UserNavbar.jsp"/>
 

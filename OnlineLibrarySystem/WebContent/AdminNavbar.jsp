@@ -19,25 +19,30 @@
       <a class="navbar-brand" href="#"></a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="HomePage.jsp">Home</a></li>
       
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Category<span class="caret"></span></a>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Book Category<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="AddCategory.jsp">Add Category</a></li>
-          <li><a href="viewAllCategories">View All Categories</a></li>
-          <li><a href="getSubCategoryForm">Add Sub Category</a></li>
-        </ul>
+          <li><a href="AddCategory.jsp">Add Book Category</a></li>
+          <li><a href="viewAllCategories">View All Book Categories</a></li>
+          </ul>/
+        
       </li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact Us</a></li>
+     		 <li><a href="viewAllBookController">ViewAllBook</a></li>
+     		 <li><a href="SearchBook">SearchBook</a></li>
+            <li><a href="viewStudentController">ViewAllStudent</a></li>
+             <li><a href="SearchStudent">SearchStudent</a></li>
+              <li><a href="viewMember">ViewAllMember</a></li>
+               <li><a href="#">IssuesBook</a></li>
+                  <li><a href="#">ReturnBook</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome : ${sessionScope.user.firstName} ${sessionScope.user.lastName}<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="ViewProfile.jsp">View Profile</a></li>
-          <li><a href="UpdateProfile.jsp">Update Profile</a></li>
-          <li><a href="#">Change Password</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+          <li><a href="StudentViewProfile.jsp">View Profile</a></li>
+          <li><a href="StudentUpdate.jsp">Update Profile</a></li>
+          <li><a href="ChangePassword.jsp">Change Password</a></li>
+          <li><a href="HomePage.jsp"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
         </ul>
       </li>
       

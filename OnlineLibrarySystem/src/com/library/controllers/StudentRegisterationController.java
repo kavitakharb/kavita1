@@ -31,7 +31,9 @@ public class StudentRegisterationController extends HttpServlet {
     	String s3=request.getParameter("fName");
     	String s4=request.getParameter("lName");
     	String s5=request.getParameter("gender");
-    	String s6=request.getParameter("dob");
+    	String s6=request.getParameter("className");
+    	Long s7=Long.parseLong(request.getParameter("mobileNo"));
+    /*	String s6=request.getParameter("dob");
     	
     	//Converting String into java.util.Date
     SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
@@ -41,15 +43,17 @@ public class StudentRegisterationController extends HttpServlet {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		} 
-    	
+    */	
     	Student stdObj=new Student();
     	stdObj.setEmail(s1);
     	stdObj.setPassword(s2);
     	stdObj.setFirstName(s3);
     	stdObj.setLastName(s4);
     	stdObj.setGender(s5);
-    stdObj.setDateOfBirth(dob);
-    	
+    	stdObj.setClassName(s6);
+    	stdObj.setMobileNo(s7);
+    /*stdObj.setDateOfBirth(dob);
+    */	
     	StudentDao dao=new StudentDaoImpl();
     	boolean r=dao.registerStudent(stdObj,"student");
     	if(r){

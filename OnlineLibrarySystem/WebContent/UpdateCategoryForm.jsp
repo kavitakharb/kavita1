@@ -1,3 +1,4 @@
+<div style="background-color:blue;height:100%">
 <jsp:include page="AdminNavbar.jsp"/>
 
 <br/>
@@ -10,6 +11,7 @@
     <div class="col-sm-10">
     <input type="text" class="form-control" id="categoryId" name="categoryId" value="${requestScope.categoryObj.categoryId}" readonly="readonly">
     </div>
+    <br><br>
  
   <div class="form-group">
     <label class="control-label col-sm-2" for="categoryName">Category Name :</label>
@@ -24,10 +26,12 @@
     </div>
   </div>
     <button type="submit" class="btn btn-default">Update Category</button>
+    </div>
 </form>
 
  </div>
+
  
 
-<br/><br/><br/>
+</div>
 	

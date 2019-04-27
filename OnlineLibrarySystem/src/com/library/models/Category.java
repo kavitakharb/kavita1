@@ -4,6 +4,8 @@ public class Category {
 	private int categoryId;
 	private String categoryName;
 	private String categoryDesc;
+	
+	 
 	public int getCategoryId() {
 		return categoryId;
 	}
@@ -23,6 +25,4 @@ public class Category {
 		this.categoryDesc = categoryDesc;
 	}
 	
-	
-
 }

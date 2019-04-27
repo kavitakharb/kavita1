@@ -39,12 +39,27 @@
     <input type="text" class="form-control" id="gender" name="gender">
     </div>
   </div>
+  
   <div class="form-group">
+    <label class="control-label col-sm-2" for="classname">Class Name:</label>
+    <div class="col-sm-10">
+    <input type="text" class="form-control" id="classname" name="className">
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="mobileno">MobileNo:</label>
+    <div class="col-sm-10">
+    <input type="tel" class="form-control" id="mobileno" name="mobileNo" placeholder="1234567890"
+    pattern="[0-9]{10}" maxlength="10" required>
+    </div>
+  </div>
+  <!-- <div class="form-group">
     <label class="control-label col-sm-2" for="dob">Date Of Birth:</label>
     <div class="col-sm-10">
     <input type="text" class="form-control" id="dob" name="dob">
     </div>
-  </div> 
+  </div> --> 
   <button type="submit" class="btn btn-default">Sign Up</button>
 </form>
 
